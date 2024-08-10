@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 FILE=`ls|grep -E '_24[0-9]{6}.docx'|tail -n 1`
 
 if [ "X$FILE" == "X" ]; then
@@ -14,3 +16,5 @@ git add Open-C3-User-Guide.docx
 git commit -m "Update to $FILE"
 
 git push
+
+echo done.
