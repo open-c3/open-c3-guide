@@ -2,7 +2,7 @@
 
 set -e
 
-FILE=`ls|grep -E '_24[0-9]{6}.docx'|tail -n 1`
+FILE=`ls|grep -E "^Open-C3.*_24[0-9]{6}.docx"|tail -n 1`
 
 if [ "X$FILE" == "X" ]; then
     echo Error: No valid file found 
